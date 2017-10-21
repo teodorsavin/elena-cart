@@ -50,6 +50,7 @@ class BooksController extends Controller
 
     public static function getCart(Request $request)
     {
+        header('Access-Control-Allow-Origin: *');
         header('Access-Control-Allow-Methods: POST');
         header('Access-Control-Allow-Headers: Content-Type');
         header('Content-type: application/json; charset=utf-8');

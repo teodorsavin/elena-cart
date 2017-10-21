@@ -23,16 +23,16 @@ class BooksController extends Controller
 
     public function headers()
     {
-        header('Access-Control-Allow-Methods: POST, GET');
-        header('Access-Control-Allow-Headers: Content-Type');
-        header('Content-type: application/json; charset=utf-8');
+//        header('Access-Control-Allow-Methods: POST, GET');
+//        header('Access-Control-Allow-Headers: Content-Type');
+//        header('Content-type: application/json; charset=utf-8');
     }
 
     public function addToCart(Request $request)
     {
-        header('Access-Control-Allow-Methods: POST');
-        header('Access-Control-Allow-Headers: Content-Type');
-        header('Content-type: application/json; charset=utf-8');
+//        header('Access-Control-Allow-Methods: POST');
+//        header('Access-Control-Allow-Headers: Content-Type');
+//        header('Content-type: application/json; charset=utf-8');
 
         $cartItem = $request->all();
 
@@ -50,10 +50,10 @@ class BooksController extends Controller
 
     public static function getCart(Request $request)
     {
-        header('Access-Control-Allow-Origin: *');
-        header('Access-Control-Allow-Methods: POST');
-        header('Access-Control-Allow-Headers: Content-Type');
-        header('Content-type: application/json; charset=utf-8');
+//        header('Access-Control-Allow-Origin: *');
+//        header('Access-Control-Allow-Methods: POST');
+//        header('Access-Control-Allow-Headers: Content-Type');
+//        header('Content-type: application/json; charset=utf-8');
 
         if (!empty($request->input("ip"))) {
             $cart = Cart::getCart($request->input("ip"));
@@ -65,9 +65,9 @@ class BooksController extends Controller
 
     public static function resetCart(Request $request)
     {
-        header('Access-Control-Allow-Methods: POST');
-        header('Access-Control-Allow-Headers: Content-Type');
-        header('Content-type: application/json; charset=utf-8');
+//        header('Access-Control-Allow-Methods: POST');
+//        header('Access-Control-Allow-Headers: Content-Type');
+//        header('Content-type: application/json; charset=utf-8');
 
         if (!empty($request->input("ip"))) {
             Cart::where('ip', $request->input("ip"))->delete();
@@ -79,9 +79,9 @@ class BooksController extends Controller
 
     public static function removeProduct(Request $request)
     {
-        header('Access-Control-Allow-Methods: POST');
-        header('Access-Control-Allow-Headers: Content-Type');
-        header('Content-type: application/json; charset=utf-8');
+//        header('Access-Control-Allow-Methods: POST');
+//        header('Access-Control-Allow-Headers: Content-Type');
+//        header('Content-type: application/json; charset=utf-8');
 
         $cartItem = $request->all();
 

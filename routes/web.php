@@ -16,9 +16,12 @@
 //});
 
 $router->get('/', 'BooksController@allBooks');
-$router->post('/add', 'BooksController@addToCart');
+//$router->post('/add', 'BooksController@addToCart');
+$router->post('/add', function () {
+    die("fuck off");
+});
 //$router->options('/add', 'BooksController@addToCart');
-$router->get('/add/product/{product_id}/quantity/{quantity}/ip/{ip}', 'BooksController@addToCart');
+//$router->get('/add/product/{product_id}/quantity/{quantity}/ip/{ip}', 'BooksController@addToCart');
 $router->post('/cart', 'BooksController@getCart');
 //$router->options('/cart', 'BooksController@getCart');
 $router->post('/reset', 'BooksController@resetCart');

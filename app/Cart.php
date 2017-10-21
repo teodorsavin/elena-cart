@@ -32,6 +32,6 @@ class Cart extends Model
     public static function getCart($ip)
     {
         $cart = self::ip($ip)->get();
-        return json_encode($cart);
+        return $cart;
     }
 }

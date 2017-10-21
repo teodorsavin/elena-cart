@@ -57,6 +57,11 @@ class BooksController extends Controller
 
         if (!empty($request->input("ip"))) {
             $cart = Cart::getCart($request->input("ip"));
+
+            foreach ($cart as $key => $cartItem) {
+                $cart[$key]["product"] = Books::$books[$cartItem['product_id']];
+            }
+
             return json_encode($cart);
         }
 

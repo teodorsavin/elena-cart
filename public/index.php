@@ -14,7 +14,7 @@
 //header('Access-Control-Allow-Methods: POST');
 //header('Access-Control-Allow-Headers: Content-Type');
 //header('Content-type: application/json; charset=utf-8');
-die("asd");
+
 $app = require __DIR__.'/../bootstrap/app.php';
 
 /*

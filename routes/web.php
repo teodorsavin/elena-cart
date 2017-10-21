@@ -25,3 +25,7 @@ $router->post('/reset', 'BooksController@resetCart');
 //$router->options('/reset', 'BooksController@resetCart');
 $router->post('/remove', 'BooksController@removeProduct');
 //$router->options('/remove', 'BooksController@removeProduct');
+
+$app->options('{path:.+}', function () {
+    //
+});
